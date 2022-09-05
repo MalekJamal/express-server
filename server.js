@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 app.post('/person', (req, res) => {
 
     const { user } = req.body;
-    res.status(201).json({ name: user.name, age: user.age + 5, gender: user.gender });
+    res.status(201).json({ name: user.name, age: parseInt(user.age) + 5, gender: user.gender });
 });
 
 function start(PORT) {
